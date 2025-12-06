@@ -19,7 +19,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
-          package-manager: pnpm@latest
+          package-manager: pnpm@8.6.0
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
