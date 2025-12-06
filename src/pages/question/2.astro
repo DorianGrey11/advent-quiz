@@ -1,0 +1,63 @@
+---
+import Layout from '@layouts/Default.astro';
+import {Card} from "@eliancodes/brutal-ui";
+---
+
+<Layout
+        title='2. Frage'
+        description='Woher kommen die Marzipanhappen?'
+        pageTitle='Adventsquiz - 2. Frage'
+        classList='bg-red'
+>
+    <main class='bg-pink p-6'>
+        <section id='question' class='gap-8 mt-4'>
+            <div>
+                <Card>
+                    <div class='flex flex-col justify-between items-start gap-4'>
+                        <h1 class='mt-4 mb-6 outfit text-5xl lg:text-7xl'>
+                            Woher kommt die Marzipanhappen?
+                        </h1>
+                    </div>
+                </Card>
+            </div>
+        </section>
+        <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
+            <div class='col-span-2'>
+                <a href="/solution/2?clicked=a">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            Lüneburg
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/2?clicked=b">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            Lübeck
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/2?clicked=c">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            Ludwigsburg
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/2?clicked=d">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            Ludwigshafen
+                        </p>
+                    </Card>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>

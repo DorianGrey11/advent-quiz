@@ -1,0 +1,66 @@
+---
+import Layout from '@layouts/Default.astro';
+import {Card} from "@eliancodes/brutal-ui";
+---
+
+<Layout
+        title='1. Frage'
+        description='Was geschah am 17.Dezember 1962?'
+        classList='bg-red'
+>
+    <main class='bg-pink p-6'>
+        <section id='question' class='gap-8 mt-4'>
+            <div>
+                <Card>
+                    <div class='flex flex-col justify-between items-start gap-4'>
+                        <h1 class='mt-4 mb-6 outfit text-5xl lg:text-7xl'>
+                            Was geschah am 17.Dezember 1962?
+                        </h1>
+                    </div>
+                </Card>
+            </div>
+        </section>
+        <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
+            <div class='col-span-2'>
+                <a href="/solution/1?clicked=a">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            In der Mozartstraße 44 in Oldenburg eröffnet Rolf Brenner das erste Reparaturcafé Europas.
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/1?clicked=b">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            In der Rathauspassage 3 in Lübeck weiht Bürgermeister Heinrich Kruse die erste rein
+                            elektrisch
+                            betriebene Stadtbuslinie des Landes ein.
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/1?clicked=c">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            In der Angelburger Straße 58 in Flensburg eröffnet Beate Uhse den ersten Sexshop der Welt.
+                        </p>
+                    </Card>
+                </a>
+            </div>
+            <div class='col-span-2'>
+                <a href="/solution/1?clicked=d">
+                    <Card>
+                        <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                            In der Hafenstraße 7 in Hamburg eröffnet Marianne Köster das erste vegetarische
+                            Schnellrestaurant der Welt.
+                        </p>
+                    </Card>
+                </a>
+
+            </div>
+        </section>
+    </main>
+</Layout>
