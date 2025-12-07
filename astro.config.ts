@@ -4,7 +4,8 @@ import UnoCSS from 'unocss/astro';
 
 export default defineConfig({
   // used to generate images
-  site:'https://doriangrey11.github.io/advent-quiz/',
+  site:'https://doriangrey11.github.io',
+  base: '/advent-quiz/',
   trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
