@@ -27,12 +27,16 @@ const solution = question.correct
         description=`${question.question}`
         classList='bg-red'
 >
-    <script type="module" define:vars={{solution}} data-astro-rerun>
+    <script type="module" define:vars={{question, solution}} data-astro-rerun>
         const params = new URLSearchParams(window.location.search);
         const correct = solution.includes(params.get('clicked'));
 
         const main = document.getElementById("main");
         main.classList.add(correct ? "bg-green" : "bg-red-600");
+
+        const results = JSON.parse(localStorage.getItem('quizResults') || '{}');
+        results[question.number] = correct;
+        localStorage.setItem('quizResults', JSON.stringify(results));
     </script>
 
     <main id='main' class='p-6'>
@@ -122,7 +126,7 @@ const solution = question.correct
                     </Button>
             }
             {numberOfQuestions == question.number &&
-                    <Button target={'_self'} href=`/final`>
+                    <Button target={'_self'} href=`/result`>
                         Quiz beenden
                     </Button>
             }

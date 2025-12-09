@@ -1,0 +1,72 @@
+---
+import Layout from '@layouts/Default.astro';
+import {Pill} from '@eliancodes/brutal-ui';
+import {Button} from '@eliancodes/brutal-ui';
+import {Card} from '@eliancodes/brutal-ui';
+import {getCollection} from "astro:content";
+
+const questions = await getCollection('questions');
+---
+
+<Layout
+        title='Result'
+        description='Result'
+        classList='bg-red'
+>
+
+    <script type="module" data-astro-rerun>
+        const results = JSON.parse(localStorage.getItem('quizResults') || '{}');
+
+        const scoreEl = document.getElementById('score');
+        scoreEl.textContent = `${Object.values(results).filter(r => r).length}`;
+
+        Object.entries(results).forEach(([questionNumber, solution]) => {
+            const questionElement = [...document.querySelectorAll(".brutal-pill")]
+                .find(e => e.textContent.trim() === `${questionNumber}. Question`);
+            questionElement.style.backgroundColor = solution ? "green" : "red";
+        });
+    </script>
+    <main class='bg-pink p-6'>
+        <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
+            <div class='col-span-4'>
+                <Card>
+                    <div class='flex flex-col justify-between items-start gap-4'>
+                        <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
+                            Congratulations
+                        </p>
+                        <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
+                            You have made it!
+                        </p>
+                        <div class='flex gap-4 flex-wrap'>
+                            <Button target={'_self'} href='/'>
+                                Back to the beginning &rarr;
+                            </Button>
+                        </div>
+                    </div>
+                </Card>
+            </div>
+            <div class='col-span-2'>
+                <Card>
+                    <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
+                        Your Result
+                    </h2>
+                    <p>
+                        You have answered <span id="score">?</span> out of {questions.length} questions correctly.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        {questions.sort((a, b) => a.data.number - b.data.number)
+                            .map((question) =>
+                                    <a href=`/question/${question.data.number}` title={question.data.english.question}>
+                                        <Pill>{question.data.number}. Question</Pill>
+                                    </a>
+                            )
+
+                        }
+                    </div>
+                    <p id="score"></p>
+                    <ul id="details"></ul>
+                </Card>
+            </div>
+        </section>
+    </main>
+</Layout>
