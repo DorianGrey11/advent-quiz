@@ -1,0 +1,17 @@
+number: 5
+question: Wieviele km ist Dorian 2025 mit wievielen Zügen gefahren?
+a: 17000 km / 200 Züge
+b: 27000 km / 300 Züge
+c: 47000 km / 400 Züge
+d: 67000 km / 500 Züge
+correct: d
+english:
+  question: How many km did Dorian travel on how many trains?
+  a: 17000 km / 200 trains
+  b: 27000 km / 300 trains
+  c: 47000 km / 400 trains
+  d: 67000 km / 500 trains
+links:
+  d:
+    label: Traewelling
+    url: https://traewelling.de/@DorianGrey11
