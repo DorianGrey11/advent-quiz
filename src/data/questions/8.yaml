@@ -1,0 +1,27 @@
+number: 8
+question: Wo gibt es in Freiburg Informationen über Veranstaltungen?
+a: tacker.fr
+b: karlsunruh.org
+c: eintopf.info
+d: sperrstunde.org
+correct: a
+english:
+  question: Where can you find events for Freiburg?
+  a: tacker.fr
+  b: karlsunruh.org
+  c: eintopf.info
+  d: sperrstunde.org
+links:
+  a:
+    label: tacker
+    url: https://tacker.fr/
+  b:
+    label: karlsunruh (Karlsruhe)
+    url: https://karlsunruh.org/
+  c:
+    label: eintopf (Stuttgart)
+    url: https://eintopf.info
+  d:
+    label: sperrstunde (Hamburg)
+    url: https://sperrstunde.org
+
