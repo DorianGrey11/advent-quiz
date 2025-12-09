@@ -1,0 +1,23 @@
+number: 4
+question: Was geschah am 17.Dezember 2010?
+a: In Kanada gelingt es Wissenschaftlern, die erste vollständig nachhaltige Stadt mit Null-Emissionen zu entwickeln.
+b: Eine Arbeitsgruppe um Emmanuelle Charpentier und Jennifer Doudna entdeckten die CRISPR/Cas-Methode.
+c: Auf der COP21 in Paris einigen sich 195 Staaten mit dem Pariser Klimaabkommen die Erderwärmung deutlich unter 2°C zu halten.
+d: Der tunesische Gemüsehändler Mohamed Bouazizi löst von Tunesien ausgehend den revolutionären Arabischen Frühling aus.
+correct: d
+english:
+  question: What happened on December 17, 2010?
+  a: In Canada, scientists succeeded in developing the first completely sustainable city with zero emissions.
+  b: A working group led by Emmanuelle Charpentier and Jennifer Doudna discovered the CRISPR/Cas method.
+  c: At COP21 in Paris, 195 countries agreed to keep global warming well below 2°C with the Paris Climate Agreement.
+  d: Tunisian vegetable seller Mohamed Bouazizi sparked the revolutionary Arab Spring, starting in Tunisia.
+links:
+  b:
+    label: CRISPR/Cas Wikipedia
+    url: https://de.wikipedia.org/wiki/CRISPR/Cas-Methode#Entdeckungsgeschichte
+  c:
+    label: Pariser Klimaabkommen Wikipedia
+    url: https://de.wikipedia.org/wiki/%C3%9Cbereinkommen_von_Paris
+  d:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Arabischer_Fr%C3%BChling#Ereignisse

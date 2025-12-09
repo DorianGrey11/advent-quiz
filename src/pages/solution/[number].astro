@@ -119,7 +119,7 @@ const solution = question.correct
                 }
             </div>
         </section>
-        <section id="navigation" class="grid md:grid-cols-4 mt-4 text-center">
+        <section id="navigation" class="grid md:grid-cols-4 mt-4 mb-4 text-center">
             {numberOfQuestions > question.number &&
                     <Button target={'_self'} href=`/question/${question.number + 1}`>
                         Nächste Frage
@@ -131,5 +131,14 @@ const solution = question.correct
                     </Button>
             }
         </section>
+        {question.links &&
+            Object.entries(question.links)
+                .filter(([key, _]) => !solution.includes(key) && key != "question")
+                .map(([_, value]) => (
+                        <a href={value.url}>
+                            <Pill>{value.label}</Pill>
+                        </a>
+                ))
+        }
     </main>
 </Layout>
