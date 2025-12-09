@@ -1,12 +1,28 @@
 ---
 import Layout from '@layouts/Default.astro';
 import {Card} from "@eliancodes/brutal-ui";
+
+import {type CollectionEntry, getCollection} from 'astro:content';
+
+export async function getStaticPaths() {
+    const questions = await getCollection('questions');
+    return questions.map((question) => ({
+        params: {number: question.data.number},
+        props: {questionObject: question},
+    }));
+}
+
+interface Props {
+    questionObject: CollectionEntry<'questions'>;
+}
+
+const {questionObject} = Astro.props;
+const question = questionObject.data
 ---
 
 <Layout
-        title='2. Frage'
-        description='Woher kommen die Marzipanhappen?'
-        pageTitle='Adventsquiz - 2. Frage'
+        title=`${question.number}. Frage`
+        description=`${question.question}`
         classList='bg-red'
 >
     <main class='bg-pink p-6'>
@@ -15,7 +31,7 @@ import {Card} from "@eliancodes/brutal-ui";
                 <Card>
                     <div class='flex flex-col justify-between items-start gap-4'>
                         <h1 class='mt-4 mb-6 outfit text-5xl lg:text-7xl'>
-                            Woher kommt die Marzipanhappen?
+                            {question.question}
                         </h1>
                     </div>
                 </Card>
@@ -23,37 +39,37 @@ import {Card} from "@eliancodes/brutal-ui";
         </section>
         <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
             <div class='col-span-2'>
-                <a href="/solution/2?clicked=a">
+                <a href=`/solution/${question.number}?clicked=a`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            Lüneburg
+                            {question.a}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/2?clicked=b">
+                <a href=`/solution/${question.number}?clicked=b`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            Lübeck
+                            {question.b}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/2?clicked=c">
+                <a href=`/solution/${question.number}?clicked=c`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            Ludwigsburg
+                            {question.c}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/2?clicked=d">
+                <a href=`/solution/${question.number}?clicked=d`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            Ludwigshafen
+                            {question.d}
                         </p>
                     </Card>
                 </a>

@@ -1,0 +1,29 @@
+number: 3
+question: Wer gehörte zu den 4 Frauen, die neben 61 Männern ab September 1948 das Grundgesetz erarbeiteten?
+a: Elisabeth Selbert
+b: Helene Weber
+c: Helene Wessel
+d: Frieda Nadig
+correct: abcd
+english:
+  question: Who belongs to the four women who, alongside 61 men, drafted the Grundgesetz (German constitution) from September 1948 onwards?
+  a: Elisabeth Selbert
+  b: Helene Weber
+  c: Helene Wessel
+  d: Frieda Nadig
+links:
+  question:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/M%C3%BCtter_des_Grundgesetzes
+  a:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Elisabeth_Selbert
+  b:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Helene_Weber
+  c:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Helene_Wessel
+  d:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Friederike_Nadig

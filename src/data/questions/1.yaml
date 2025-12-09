@@ -1,0 +1,17 @@
+number: 1
+question: Was geschah am 17.Dezember 1962?
+a: In der Mozartstraße 44 in Oldenburg eröffnet Rolf Brenner das erste Reparaturcafé Europas.
+b: In der Rathauspassage 3 in Lübeck weiht Bürgermeister Heinrich Kruse die erste rein elektrisch betriebene Stadtbuslinie des Landes ein.
+c: In der Angelburger Straße 58 in Flensburg eröffnet Beate Uhse den ersten Sexshop der Welt.
+d: In der Hafenstraße 7 in Hamburg eröffnet Marianne Köster das erste vegetarische Schnellrestaurant der Welt.
+correct: c
+english:
+  question: What happened on December 17, 1962?
+  a: Rolf Brenner opened Europe's first repair café at Mozartstraße 44 in Oldenburg.
+  b: Mayor Heinrich Kruse inaugurated the state's first purely electric city bus line at Rathauspassage 3 in Lübeck.
+  c: Beate Uhse opened the world's first sex shop at Angelburger Straße 58 in Flensburg.
+  d: Marianne Köster opened the world's first vegetarian fast food restaurant at Hafenstraße 7 in Hamburg.
+links:
+  a:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Sexshop#Geschichte

@@ -1,0 +1,17 @@
+number: 2
+question: Wer wegen der Lübecker Marzipan die Stadt besuchen möchte, hat die Möglichkeit dies in einem kollektiv betriebenen Hostel zu tun. Wie heißt dieses?
+a: SchickSAAl
+b: UnruhRuh
+c: HausGemeinschaft
+d: BettGenossenschaft
+correct: a
+english:
+  question: Anyone who wants to visit the city because of Lübecker Marzipan has the opportunity to do so in a collectively run hostel. What is it called?
+  a: SchickSAAl (FateRoom)
+  b: UnruhRuh (RestlessRest)
+  c: HausGemeinschaft (HouseCommunity)
+  d: BettGenossenschaft (BedCooperative)
+links:
+  a:
+    label: Website
+    url: https://schicksaal.net/

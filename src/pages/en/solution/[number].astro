@@ -1,0 +1,131 @@
+---
+import Layout from '@layouts/Default.astro';
+import {Button, Card, Pill} from "@eliancodes/brutal-ui";
+
+import {type CollectionEntry, getCollection} from 'astro:content';
+
+export async function getStaticPaths() {
+    const questions = await getCollection('questions');
+    return questions.map((question) => ({
+        params: {number: question.data.number},
+        props: {questionObject: question, numberOfQuestions: questions.length},
+    }));
+}
+
+interface Props {
+    questionObject: CollectionEntry<'questions'>;
+    numberOfQuestions: number;
+}
+
+const {questionObject, numberOfQuestions} = Astro.props;
+const question = questionObject.data
+const solution = question.correct
+---
+
+<Layout
+        title=`Solution ${question.number}. Question`
+        description=`${question.english.question}`
+        classList='bg-red'
+>
+    <script type="module" define:vars={{solution}} data-astro-rerun>
+        const params = new URLSearchParams(window.location.search);
+        const correct = solution.includes(params.get('clicked'));
+
+        const main = document.getElementById("main");
+        main.classList.add(correct ? "bg-green" : "bg-red-600");
+    </script>
+
+    <main id='main' class='p-6'>
+        <section id='question' class='gap-8 mt-4'>
+            <div>
+                <Card>
+                    <div class='flex flex-col justify-between items-start gap-4'>
+                        <h1 class='mt-4 mb-6 outfit text-5xl lg:text-7xl'>
+                            {question.english.question}
+                        </h1>
+                        {
+                            question.links?.question &&
+                                <a href={question.links.question.url}>
+                                    <Pill>{question.links.question.label}</Pill>
+                                </a>
+                        }
+                    </div>
+                </Card>
+            </div>
+        </section>
+        <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
+            <div class='col-span-2'>
+                {solution.includes("a") &&
+                        <Card>
+                            <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                                {question.english.a}
+                            </p>
+                            {
+                                question.links?.a &&
+                                    <a href={question.links.a.url}>
+                                        <Pill>{question.links.a.label}</Pill>
+                                    </a>
+                            }
+                        </Card>
+                }
+            </div>
+            <div class='col-span-2'>
+                {solution.includes("b") &&
+                        <Card>
+                            <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                                {question.english.b}
+                            </p>
+                            {
+                                question.links?.b &&
+                                    <a href={question.links.b.url}>
+                                        <Pill>{question.links.b.label}</Pill>
+                                    </a>
+                            }
+                        </Card>
+                }
+            </div>
+            <div class='col-span-2'>
+                {solution.includes("c") &&
+                        <Card>
+                            <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                                {question.english.c}
+                            </p>
+                            {
+                                question.links?.c &&
+                                    <a href={question.links.c.url}>
+                                        <Pill>{question.links.c.label}</Pill>
+                                    </a>
+                            }
+                        </Card>
+                }
+            </div>
+            <div class='col-span-2'>
+                {solution.includes("d") &&
+                        <Card>
+                            <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
+                                {question.english.d}
+                            </p>
+                            {
+                                question.links?.d &&
+                                    <a href={question.links.d.url}>
+                                        <Pill>{question.links.d.label}</Pill>
+                                    </a>
+                            }
+                        </Card>
+                }
+            </div>
+        </section>
+        <section id="navigation" class="grid md:grid-cols-4 mt-4 text-center">
+            {numberOfQuestions > question.number &&
+                    <Button target={'_self'} href=`/en/question/${question.number + 1}`>
+                        Next Question
+                    </Button>
+            }
+            {numberOfQuestions == question.number &&
+                    <Button target={'_self'} href=`/en/final`>
+                        Finish Quiz
+                    </Button>
+            }
+        </section>
+    </main>
+</Layout>

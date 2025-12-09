@@ -1,11 +1,28 @@
 ---
 import Layout from '@layouts/Default.astro';
 import {Card} from "@eliancodes/brutal-ui";
+
+import {type CollectionEntry, getCollection} from 'astro:content';
+
+export async function getStaticPaths() {
+    const questions = await getCollection('questions');
+    return questions.map((question) => ({
+        params: {number: question.data.number},
+        props: {questionObject: question},
+    }));
+}
+
+interface Props {
+    questionObject: CollectionEntry<'questions'>;
+}
+
+const {questionObject} = Astro.props;
+const question = questionObject.data
 ---
 
 <Layout
-        title='1. Frage'
-        description='Was geschah am 17.Dezember 1962?'
+        title=`${question.number}. Question`
+        description=`${question.english.question}`
         classList='bg-red'
 >
     <main class='bg-pink p-6'>
@@ -14,7 +31,7 @@ import {Card} from "@eliancodes/brutal-ui";
                 <Card>
                     <div class='flex flex-col justify-between items-start gap-4'>
                         <h1 class='mt-4 mb-6 outfit text-5xl lg:text-7xl'>
-                            Was geschah am 17.Dezember 1962?
+                            {question.english.question}
                         </h1>
                     </div>
                 </Card>
@@ -22,44 +39,40 @@ import {Card} from "@eliancodes/brutal-ui";
         </section>
         <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
             <div class='col-span-2'>
-                <a href="/solution/1?clicked=a">
+                <a href=`/en/solution/${question.number}?clicked=a`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            In der Mozartstraße 44 in Oldenburg eröffnet Rolf Brenner das erste Reparaturcafé Europas.
+                            {question.english.a}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/1?clicked=b">
+                <a href=`/en/solution/${question.number}?clicked=b`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            In der Rathauspassage 3 in Lübeck weiht Bürgermeister Heinrich Kruse die erste rein
-                            elektrisch
-                            betriebene Stadtbuslinie des Landes ein.
+                            {question.english.b}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/1?clicked=c">
+                <a href=`/en/solution/${question.number}?clicked=c`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            In der Angelburger Straße 58 in Flensburg eröffnet Beate Uhse den ersten Sexshop der Welt.
+                            {question.english.c}
                         </p>
                     </Card>
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href="/solution/1?clicked=d">
+                <a href=`/en/solution/${question.number}?clicked=d`>
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
-                            In der Hafenstraße 7 in Hamburg eröffnet Marianne Köster das erste vegetarische
-                            Schnellrestaurant der Welt.
+                            {question.english.d}
                         </p>
                     </Card>
                 </a>
-
             </div>
         </section>
     </main>
