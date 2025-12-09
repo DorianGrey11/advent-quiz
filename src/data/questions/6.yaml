@@ -1,0 +1,26 @@
+number: 6
+question: Was geschah am 17.Dezember 1903?
+a: In London wurde das erste Telefonat zwischen zwei Regierungsbehörden dokumentiert, während die meisten Städte noch auf Telegramme setzten.
+b: Die Gebrüder Wright gehen mit dem ersten bemannten Motorflug in die Geschichte ein, obwohl Gustav Weißkopf diesen wahrscheinlich schon zwei Jahre vorher durchgeführt hat.
+c: Der Adler fuhr als erste Eisenbahnlokomotive die Strecke zwischen Nürnberg und Fürth, obwohl bereits Jahre vorher ein betriebsfähiger Dampfwagen in Berlin fuhr.
+d: In Paris wurde die erste elektrische Straßenbeleuchtung in Betrieb genommen, obwohl in anderen europäischen Städten bereits seit Jahren elektrische Lampen genutzt wurden.
+correct: b
+english:
+  question: What happened on December 17, 1903?
+  a: The first telephone call between two government agencies was documented in London, while most cities still relied on telegrams.
+  b: The Wright brothers made history with the first manned powered flight, although Gustav Weißkopf had probably already done so two years earlier.
+  c: The Adler was the first railway locomotive to travel between Nuremberg and Fürth, although a working steam car had already been operating in Berlin for years.
+  d: The first electric street lighting was put into operation in Paris, although electric lamps had already been in use in other European cities for years.
+links:
+  a:
+    label: Telefon Wikipedia
+    url: https://traewelling.de/@DorianGrey11
+  b:
+    label: Wikipedia
+    url: https://de.wikipedia.org/wiki/Br%C3%BCder_Wright#Priorit%C3%A4tsanspruch_auf_den_ersten_Motorflug
+  c:
+    label: Der Adler Wikipedia
+    url: https://de.wikipedia.org/wiki/LEG_%E2%80%93_Adler_und_Pfeil#Fr%C3%BChere_deutsche_Lokomotiven
+  d:
+    label: Straßenbeleuchtung Wikipedia
+    url: https://de.wikipedia.org/wiki/Stra%C3%9Fenbeleuchtung#cite_note-13
