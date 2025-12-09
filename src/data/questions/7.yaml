@@ -1,0 +1,18 @@
+number: 7
+question: Seit wann ist eine Abtreibung in Deutschland keine Straftat mehr?
+a: November 1989
+b: Dezember 1998
+c: Februar 2002
+d: ist es immer noch
+correct: d
+english:
+  question: Since when has abortion no longer been a criminal offense in Germany?
+  a: November 1989
+  b: December 1998
+  c: February 2002
+  d: it still is
+links:
+  d:
+    label: Weg mit §218
+    url: https://wegmit218.de/geschichte-des-widerstands-gegen-%c2%a7-218ff/
+
