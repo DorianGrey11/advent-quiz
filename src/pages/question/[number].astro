@@ -39,7 +39,8 @@ const question = questionObject.data
         </section>
         <section id='answers' class='grid md:grid-cols-4 xl:grid-cols-8 gap-4 lg:gap-8 mt-16 md:mt-6'>
             <div class='col-span-2'>
-                <a href=`/solution/${question.number}?clicked=a`>
+                <a href=`/solution/${question.number}?clicked=a`
+                   onclick="plausible('Answered', {props: { choice: 'a', lang: 'de' }})">
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
                             {question.a}
@@ -48,7 +49,8 @@ const question = questionObject.data
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href=`/solution/${question.number}?clicked=b`>
+                <a href=`/solution/${question.number}?clicked=b`
+                   onclick="plausible('Answered', {props: { choice: 'b', lang: 'de' }})">
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
                             {question.b}
@@ -57,7 +59,8 @@ const question = questionObject.data
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href=`/solution/${question.number}?clicked=c`>
+                <a href=`/solution/${question.number}?clicked=c`
+                   onclick="plausible('Answered', {props: { choice: 'c', lang: 'de' }})">
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
                             {question.c}
@@ -66,7 +69,8 @@ const question = questionObject.data
                 </a>
             </div>
             <div class='col-span-2'>
-                <a href=`/solution/${question.number}?clicked=d`>
+                <a href=`/solution/${question.number}?clicked=d`
+                   onclick="plausible('Answered', {props: { choice: 'd', lang: 'de' }})">
                     <Card>
                         <p class='text-lg md:text-xl lg:text-3xl md:mb-4 dm-serif'>
                             {question.d}
