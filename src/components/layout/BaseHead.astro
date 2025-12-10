@@ -42,7 +42,11 @@ const { title, description, ogImage } = Astro.props;
   <link rel='icon' type='image/svg' href='/favicon.svg' />
 
   <title>Adventsquiz {title}</title>
-
+  <script
+      data-domain='nzbka.de'
+      data-api='https://plausible.io/api/event'
+      src='/js/plausible.js'>
+  </script>
   <ViewTransitions />
 
   <slot />
