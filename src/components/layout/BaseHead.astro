@@ -47,17 +47,17 @@ const {title, description, ogImage} = Astro.props;
             data-api='https://plausible.io/api/event'
             src='/js/plausible.js'>
     </script>
-    <script data-astro-rerun>
-        let params = new URLSearchParams(window.location.search);
-        let clicked = params.get("clicked");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let params = new URLSearchParams(window.location.search);
+            let clicked = params.get("clicked");
 
-        if (clicked) {
-            window.plausible("click", {
-                props: {
-                    clicked,
-                },
-            });
-        }
+            if (clicked && window.plausible) {
+                window.plausible("click", {
+                    props: {clicked},
+                });
+            }
+        });
     </script>
     <ViewTransitions/>
 
