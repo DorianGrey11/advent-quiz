@@ -47,7 +47,7 @@ const {title, description, ogImage} = Astro.props;
             data-api='https://plausible.io/api/event'
             src='/js/plausible.js'>
     </script>
-    <script>
+    <script data-astro-rerun>
         const params = new URLSearchParams(window.location.search);
         const clicked = params.get("clicked");
 
