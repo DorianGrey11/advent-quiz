@@ -29,7 +29,7 @@ const solution = question.correct
 >
     <script type="module" define:vars={{question, solution}} data-astro-rerun>
         const params = new URLSearchParams(window.location.search);
-        const correct = solution.includes(params.get('clicked'));
+        const correct = solution.includes(params.get('ref'));
 
         const main = document.getElementById("main");
         main.classList.add(correct ? "bg-green" : "bg-red-600");
