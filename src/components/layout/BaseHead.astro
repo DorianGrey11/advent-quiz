@@ -48,8 +48,8 @@ const {title, description, ogImage} = Astro.props;
             src='/js/plausible.js'>
     </script>
     <script data-astro-rerun>
-        const params = new URLSearchParams(window.location.search);
-        const clicked = params.get("clicked");
+        let params = new URLSearchParams(window.location.search);
+        let clicked = params.get("clicked");
 
         if (clicked) {
             window.plausible("click", {
