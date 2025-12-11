@@ -13,15 +13,15 @@ english:
   d: sperrstunde.org
 links:
   a:
-    label: tacker
+    label: tacker (Freiburg)
     url: https://tacker.fr/
   b:
-    label: karlsunruh (Karlsruhe)
+    label: karlsunruh (Karlsruhe)
     url: https://karlsunruh.org/
   c:
-    label: eintopf (Stuttgart)
+    label: eintopf (Stuttgart)
     url: https://eintopf.info
   d:
-    label: sperrstunde (Hamburg)
+    label: sperrstunde (Hamburg)
     url: https://sperrstunde.org
 

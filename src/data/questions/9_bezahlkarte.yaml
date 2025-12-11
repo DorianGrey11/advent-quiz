@@ -1,5 +1,5 @@
 number: 9
-question: Wieviel Bargeld können Geflohene mit Bezahlkarte im Monat abheben, um Rechtsanwälte, Fahrkarten, oder überall, wo VISA nicht akzeptiert wird, zu bezahlen?
+question: Wieviel Bargeld können Geflohene mit Bezahlkarte im Monat abheben, um Anwälte, Fahrkarten, oder überall, wo VISA nicht akzeptiert wird, zu bezahlen?
 a: 50€
 b: 80€
 c: 133€
@@ -16,10 +16,10 @@ links:
     label: Bezahlkarte-Stoppen Freiburg
     url: https://bezahlkarte-stoppen.org/
   b:
-    label: FAQ
+    label: Bezahlkarte FAQ
     url: https://nein-zur-bezahlkarte-karlsruhe.de/faq/
   c:
-    label: Ressourcen
+    label: Bezahlkarte Ressourcen
     url: https://nein-zur-bezahlkarte-karlsruhe.de/ressourcen/
   d:
     label: Gutscheintausch
