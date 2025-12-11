@@ -3,6 +3,18 @@ interface PlausibleOptions {
   u?: string; // optional URL override
 }
 
-interface Window {
-  plausible: (event: string, options?: PlausibleOptions) => void;
+interface PlausibleFn {
+  (event: string, options?: PlausibleOptions): void;
+
+  q?: unknown[];
+  o?: Record<string, any>;
+  init?: (options?: Record<string, any>) => void;
 }
+
+declare global {
+  interface Window {
+    plausible: PlausibleFn;
+  }
+}
+
+export {};

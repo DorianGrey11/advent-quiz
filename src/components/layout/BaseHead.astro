@@ -42,22 +42,26 @@ const {title, description, ogImage} = Astro.props;
     <link rel='icon' type='image/svg' href='/favicon.svg'/>
 
     <title>Adventsquiz {title}</title>
-    <script
-            data-domain='nzbka.de'
-            data-api='https://plausible.io/api/event'
-            src='/js/plausible.js'>
+    <script src='/js/plausible.js'>
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let params = new URLSearchParams(window.location.search);
-            let clicked = params.get("clicked");
-
-            if (clicked && window.plausible) {
-                window.plausible("click", {
-                    props: {clicked},
-                });
+        window.plausible = window.plausible || function () {
+            (window.plausible.q = window.plausible.q || []).push(arguments)
+        }, window.plausible.init = window.plausible.init || function (i) {
+            window.plausible.o = i || {}
+        };
+        window.plausible.init({
+            customProperties: function (eventName: string) {
+                if (eventName == "pageview") {
+                    let params = new URLSearchParams(window.location.search);
+                    let clicked = params.get("clicked");
+                    return {
+                        clicked,
+                    }
+                }
+                return {}
             }
-        });
+        })
     </script>
     <ViewTransitions/>
 
