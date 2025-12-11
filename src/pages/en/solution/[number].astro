@@ -49,8 +49,7 @@ const solution = question.correct
                         </h1>
                         {
                             question.links?.question &&
-                                <a href={question.links.question.url}
-                                   onclick="plausible('Pill clicked', {props: { label: question.links.question.label}})">
+                                <a href={question.links.question.url}>
                                     <Pill>{question.links.question.label}</Pill>
                                 </a>
                         }
@@ -67,8 +66,7 @@ const solution = question.correct
                             </p>
                             {
                                 question.links?.a &&
-                                    <a href={question.links.a.url}
-                                       onclick="plausible('Pill clicked', {props: { label: question.links.a.label}})">
+                                    <a href={question.links.a.url}>
                                         <Pill>{question.links.a.label}</Pill>
                                     </a>
                             }
@@ -83,8 +81,7 @@ const solution = question.correct
                             </p>
                             {
                                 question.links?.b &&
-                                    <a href={question.links.b.url}
-                                       onclick="plausible('Pill clicked', {props: { label: question.links.b.label}})">
+                                    <a href={question.links.b.url}>
                                         <Pill>{question.links.b.label}</Pill>
                                     </a>
                             }
@@ -99,8 +96,7 @@ const solution = question.correct
                             </p>
                             {
                                 question.links?.c &&
-                                    <a href={question.links.c.url}
-                                       onclick="plausible('Pill clicked', {props: { label: question.links.c.label}})">
+                                    <a href={question.links.c.url}>
                                         <Pill>{question.links.c.label}</Pill>
                                     </a>
                             }
@@ -115,8 +111,7 @@ const solution = question.correct
                             </p>
                             {
                                 question.links?.d &&
-                                    <a href={question.links.d.url}
-                                       onclick="plausible('Pill clicked', {props: { label: question.links.d.label}})">
+                                    <a href={question.links.d.url}>
                                         <Pill>{question.links.d.label}</Pill>
                                     </a>
                             }
@@ -141,8 +136,7 @@ const solution = question.correct
                 Object.entries(question.links)
                     .filter(([key, _]) => !solution.includes(key) && key != "question")
                     .map(([_, value]) => (
-                            <a href={value.url}
-                               onclick="plausible('Pill clicked', {props: { label: value.label}})">
+                            <a href={value.url}>
                                 <Pill>{value.label}</Pill>
                             </a>
                     ))
