@@ -1,0 +1,27 @@
+number: 9
+question: Wieviel Bargeld können Geflohene mit Bezahlkarte im Monat abheben, um Rechtsanwälte, Fahrkarten, oder überall, wo VISA nicht akzeptiert wird, zu bezahlen?
+a: 50€
+b: 80€
+c: 133€
+d: 196€
+correct: a
+english:
+  question: How much cash can refugees withdraw per month using a Bezahlkarte to pay for lawyers, tickets, or anywhere else where VISA is not accepted?
+  a: 50€
+  b: 80€
+  c: 133€
+  d: 196€
+links:
+  a:
+    label: Bezahlkarte-Stoppen Freiburg
+    url: https://bezahlkarte-stoppen.org/
+  b:
+    label: FAQ
+    url: https://nein-zur-bezahlkarte-karlsruhe.de/faq/
+  c:
+    label: Ressourcen
+    url: https://nein-zur-bezahlkarte-karlsruhe.de/ressourcen/
+  d:
+    label: Gutscheintausch
+    url: https://bezahlkarte-stoppen.org/posts/2025-05-02_gutscheintausch/
+
