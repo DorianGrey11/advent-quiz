@@ -17,6 +17,7 @@ interface Props {
     numberOfQuestions: number;
 }
 
+const questions = await getCollection('questions');
 const {questionObject, numberOfQuestions} = Astro.props;
 const question = questionObject.data
 const solution = question.correct
@@ -24,6 +25,7 @@ const solution = question.correct
 
 <Layout
         title=`Solution ${question.number}. Question`
+        pageTitle=`Question ${question.number} out of ${questions.length}`
         description=`${question.english.question}`
         classList='bg-red'
 >

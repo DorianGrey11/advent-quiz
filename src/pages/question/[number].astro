@@ -16,12 +16,14 @@ interface Props {
     questionObject: CollectionEntry<'questions'>;
 }
 
+const questions = await getCollection('questions');
 const {questionObject} = Astro.props;
 const question = questionObject.data
 ---
 
 <Layout
         title=`${question.number}. Frage`
+        pageTitle=`Frage ${question.number} von ${questions.length}`
         description=`${question.question}`
         classList='bg-red'
 >
