@@ -50,18 +50,7 @@ const {title, description, ogImage} = Astro.props;
         }, window.plausible.init = window.plausible.init || function (i) {
             window.plausible.o = i || {}
         };
-        window.plausible.init({
-            customProperties: function (eventName: string) {
-                if (eventName == "pageview") {
-                    let params = new URLSearchParams(window.location.search);
-                    let clicked = params.get("clicked");
-                    return {
-                        clicked,
-                    }
-                }
-                return {}
-            }
-        })
+        window.plausible.init({})
     </script>
     <ViewTransitions/>
 
