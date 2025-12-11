@@ -31,6 +31,8 @@ const solution = question.correct
         const params = new URLSearchParams(window.location.search);
         const correct = solution.includes(params.get('clicked'));
 
+        window.plausible('clicked', {props: {clicked: params.get('clicked'), correct}})
+
         const main = document.getElementById("main");
         main.classList.add(correct ? "bg-green" : "bg-red-600");
 
