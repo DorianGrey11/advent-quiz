@@ -42,7 +42,7 @@ const {title, description, ogImage} = Astro.props;
     <link rel='icon' type='image/svg' href='/favicon.svg'/>
 
     <title>Adventsquiz {title}</title>
-    <script src='/js/plausible.js'>
+    <script async is:inline src='/js/plausible.js'>
     </script>
     <script>
         window.plausible = window.plausible || function () {
