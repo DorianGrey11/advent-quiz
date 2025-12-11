@@ -1,0 +1,17 @@
+number: 5
+question: Wieviele Tiere wurden 2023 in Deutschland getötet? (Hauptsächlich für Omnivore/vegetarische Ernährung)
+a: 83 Millionen (1x DE Bevölkerung)
+b: 345 Millionen (4x DE Bevölkerung)
+c: 745 Millionen (9x DE Bevölkerung)
+d: 835 Millionen (10x DE Bevölkerung)
+correct: c
+english:
+  question: How many km did Dorian travel on how many trains? (Mainly for omnivorous/vegetarian diets)
+  a: 83 million (1x population of Germany)
+  b: 345 million (4x population of Germany)
+  c: 745 million (9x population of Germany)
+  d: 835 million (10x population of Germany)
+links:
+  d:
+    label: Kill-Counter
+    url: https://fuer-alle-tiere.org/kill-counter/

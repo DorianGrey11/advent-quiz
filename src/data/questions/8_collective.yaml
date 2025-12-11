@@ -1,4 +1,4 @@
-number: 2
+number: 8
 question: Wer wegen der Lübecker Marzipan die Stadt besuchen möchte, hat die Möglichkeit dies in einem kollektiv betriebenen Hostel zu tun. Wie heißt dieses?
 a: schickSAAL
 b: UnruhRuh
@@ -14,4 +14,7 @@ english:
 links:
   a:
     label: Website
-    url: https://schicksaal.net/
+    url: https://schicksaal.net/&
+  b:
+    label: Kollektivliste
+    url: https://kollektivliste.org/

@@ -1,0 +1,18 @@
+number: 6
+question: Wieviele Haftjahre hat der Freiheitsfonds aufgelöst und damit wie viele Kosten eingespart, indem er die Strafe für Menschen bezahlt hat, die wegen Fahren ohne Ticket im Gefängnis saßen.
+a: Gefangene können nicht freigekauft werden
+b: 78 Jahre / 1 Millionen Euro
+c: 178 Jahre / 11 Millionen Euro
+d: 278 Jahre / 21 Millionen Euro
+correct: d
+english:
+  question: How many years of imprisonment has the Freedom Fund resolved and thus how much money has it saved by paying the fines of people who were in prison for traveling without a ticket?
+  a: Prisoners cannot be ransomed
+  b: 78 years / €1 million
+  c: 178 years / €11 million
+  d: 278 years / €21 million
+links:
+  d:
+    label: Freiheitsfonds
+    url: https://freiheitsfonds.de/
+
