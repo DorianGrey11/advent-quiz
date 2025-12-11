@@ -1,0 +1,20 @@
+number: 10
+question: 3 von 4 Milliardäre in Deutschland haben Ihren Reichtum geerbt. Wieviel Steuer wurde 2023 auf das vererbte Vermögen (400Mrd) gezahlt?
+a: 9,2 Mrd (2,3%)
+b: 18,4 Mrd (4,6%)
+c: 65,6 Mrd (16,4%)
+d: 131,2 Mrd (32,8%)
+correct: a
+english:
+  question: Three out of four billionaires in Germany inherited their wealth. How much tax was paid on the inheritance (400 billion) in 2023?
+  a: 9,2 Mrd (2,3%)
+  b: 18,4 Mrd (4,6%)
+  c: 65,6 Mrd (16,4%)
+  d: 131,2 Mrd (32,8%)
+links:
+  a:
+    label: Ungleichheit.info
+    url: https://ungleichheit.info/de/visuals
+  b:
+    label: "Datapulse: Milliardäre"
+    url: https://www.datapulse.de/milliardaere/
