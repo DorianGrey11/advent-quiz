@@ -16,9 +16,11 @@ const questions = await getCollection('questions');
 
     <script type="module" data-astro-rerun>
         const results = JSON.parse(localStorage.getItem('quizResults') || '{}');
+        const correctlyAnswered = Object.values(results).filter(r => r).length
+        window.plausible('result', {props: {result: correctlyAnswered}})
 
         const scoreEl = document.getElementById('score');
-        scoreEl.textContent = `${Object.values(results).filter(r => r).length}`;
+        scoreEl.textContent = `${correctlyAnswered}`;
 
         Object.entries(results).forEach(([questionNumber, solution]) => {
             const questionElement = [...document.querySelectorAll(".brutal-pill")]
